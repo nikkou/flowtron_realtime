@@ -1,6 +1,6 @@
 ![Flowtron](https://nv-adlr.github.io/images/flowtron_logo.png "Flowtron")
 
-Based on "Flowtron: an Autoregressive Flow-based Network for Text-to-Mel-spectrogram Synthesis" (Rafael Valle, Kevin Shih, Ryan Prenger and Bryan Catanzaro)
+Picks up sentences and plays them in a loop. Based on "Flowtron: an Autoregressive Flow-based Network for Text-to-Mel-spectrogram Synthesis" (Rafael Valle, Kevin Shih, Ryan Prenger and Bryan Catanzaro)
 
 
 ## Setup
@@ -13,7 +13,7 @@ Based on "Flowtron: an Autoregressive Flow-based Network for Text-to-Mel-spectro
 6. Download pretrained models and place them in `models/`. [Flowtron LJS](https://drive.google.com/open?id=1Cjd6dK_eFz6DE0PKXKgKxrzTUqzzUDW-), [WaveGlow v4](https://drive.google.com/file/d/1okuUstGoBe_qZ4qUEF8CcwEugHP7GM_b/view).
 
 ## My inference demo
-1. Run `inference_realtime.py`, you'll get presented with a keyboard loop. Every sentence ending with full stop is picked up, modeled and played in a separate thread, then it waits for a new sentence. Right alt is exit.
+1. Run `inference_realtime.py`, you'll get presented with a keyboard loop. Every sentence with a-z and space ending with full stop is picked up, modeled and played in a separate thread, then it waits for a new sentence. Right alt is exit.
 2. Change n_frames, gate_threshold in `inference_realtime.py` according to your intuition. Larger n_frames should require more GPU memory but also allows to model longer sentences.
 
 ## Original inference demo
